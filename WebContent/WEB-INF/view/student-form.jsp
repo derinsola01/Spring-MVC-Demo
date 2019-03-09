@@ -26,6 +26,14 @@
 				<form:option value="Germany" label="Germany"/> --%>
 			</form:select>
 			<br><br>
+			Programming Language: 
+			<br>
+			Java	<form:radiobutton path="favoriteLanguage" value="Java"/>
+			Python	<form:radiobutton path="favoriteLanguage" value="Python"/>
+			C#		<form:radiobutton path="favoriteLanguage" value="C#"/>
+			C++		<form:radiobutton path="favoriteLanguage" value="C++"/>
+			Ruby	<form:radiobutton path="favoriteLanguage" value="Ruby"/>
+			<br><br>
 			<input type="submit" value="Submit"/>
 		</form:form>
 	</body>
