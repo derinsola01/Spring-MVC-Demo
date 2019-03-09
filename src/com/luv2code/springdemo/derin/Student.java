@@ -7,11 +7,15 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private String country;
+	private String favoriteLanguage;
+	private String operatingSystem;
 	
 	private LinkedHashMap<String, String> countryOptions;
+	private LinkedHashMap<String, String> favoriteLanguageOptions;
 	
 	public Student() {
 		countryOptions = new LinkedHashMap<>();
+		favoriteLanguageOptions = new LinkedHashMap<>();
 		countryOptions.put("NG", "Nigeria");
 		countryOptions.put("US", "United States of America");
 		countryOptions.put("CA", "Canada");
@@ -19,6 +23,11 @@ public class Student {
 		countryOptions.put("ES", "SPAIN");
 		countryOptions.put("BR", "Brazil");
 		countryOptions.put("DE", "Germany");
+		
+		favoriteLanguageOptions.put("Java", "Java");
+        favoriteLanguageOptions.put("C#", "C#");
+        favoriteLanguageOptions.put("PHP", "PHP");
+        favoriteLanguageOptions.put("Ruby", "Ruby");
 		
 		
 		/* The code below keeps generating a null line along with valid lines from the 
@@ -81,5 +90,29 @@ public class Student {
 	public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
 		this.countryOptions = countryOptions;
 	}
-		
+
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+		return favoriteLanguageOptions;
+	}
+
+	public void setFavoriteLanguageOptions(LinkedHashMap<String, String> favoriteLanguageOptions) {
+		this.favoriteLanguageOptions = favoriteLanguageOptions;
+	}
+
+	public String getOperatingSystem() {
+		return operatingSystem;
+	}
+
+	public void setOperatingSystem(String operatingSystem) {
+		this.operatingSystem = operatingSystem;
+	}
+	
 }

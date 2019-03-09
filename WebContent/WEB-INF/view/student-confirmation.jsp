@@ -12,5 +12,7 @@
 		Country is ${ student.country }
 		<br>
 		Favorite Programming Language is: ${ student.favoriteLanguage }
+		<br>
+		Favorite Operating System is: ${ student.operatingSystem }
 	</body>
 </html>
