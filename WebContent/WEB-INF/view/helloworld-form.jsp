@@ -8,7 +8,7 @@
 			<input type="text" name="studentName"
 					placeholder="What's your name?"/>
 					
-			<input type="submit"/>
+			<input type="submit" value="Process Query"/>
 		</form>
 	</body>
 </html>
