@@ -6,7 +6,8 @@
 	<body>
 		Hello World of Spring
 		<br><br>
-		<%-- Student name is: ${param.studentName} --%>
-		Student name is: ${message}
+		Student name is: ${param.studentName}
+		<br><br>
+		Using Version Two (All Caps) Student name is: ${message}
 	</body>
 </html>
