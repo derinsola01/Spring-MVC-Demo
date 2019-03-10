@@ -80,7 +80,7 @@ public class Student {
 		LinkedHashMap<String, String> tempLoader = new LinkedHashMap<>();
 		for (String country : arrayLoader){
 			if (country != null) {
-				String[] tempArr = country.split(" ");
+				String[] tempArr = country.split("\t");
 				System.out.println("Before setting the List code is: " + tempArr[1] + " Country is: " + tempArr[0]);
 				tempLoader.put(tempArr[1], tempArr[0]);
 			}

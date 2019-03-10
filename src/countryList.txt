@@ -1,12 +1,17 @@
-Argentina AG
-Nigeria NG
-Gambia GB
-Sudan SD
-India IN
-Armenia AR
-Greece GK
-France FR
-Chad TD
-Chile CL
-Egypt EG
-Denmark DK
+Argentina	AG
+Nigeria	NG
+Gambia	GB
+Sudan	SD
+India	IN
+Armenia	AR
+Greece	GK
+France	FR
+Chad	TD
+Chile	CL
+Egypt	EG
+Denmark	DK
+British Virgin Islands	VG
+Bouvet Island	BV
+Antigua and Barbuda	AG
+American Samoa	AS
+ALA	Aland Islands	AX
