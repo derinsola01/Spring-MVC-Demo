@@ -15,7 +15,7 @@
 		<br>
 		Favorite Programming Language is: ${ student.favoriteLanguage }
 		<br>
-		Favorite Operating System is:
+		Operating Systems:
 		<ol>
 			<c:forEach var="temp" items="${ student.operatingSystem }">
 				<li>

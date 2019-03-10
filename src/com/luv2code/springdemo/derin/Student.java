@@ -2,9 +2,15 @@ package com.luv2code.springdemo.derin;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student {
 
 	private String firstName;
+	
+	@NotNull(message="Field cannot be empty.")
+	@Size(min=3, message="Must have at least 3 Characters.")
 	private String lastName;
 	private String country;
 	private String favoriteLanguage;
