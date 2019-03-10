@@ -32,7 +32,7 @@ public class Student {
 		favoriteLanguageOptions = new LinkedHashMap<>();
 		operatingSystemOptions = new LinkedHashMap<>();
 		
-		// populate Countries
+		// populate Countries manual
 //		countryOptions.put("NG", "Nigeria");
 //		countryOptions.put("US", "United States of America");
 //		countryOptions.put("CA", "Canada");
@@ -53,16 +53,7 @@ public class Student {
         operatingSystemOptions.put("Linux", "LINUX");
         operatingSystemOptions.put("Ubuntu", "UBUNTU");
 		
-		
-		/* The code below keeps generating a null line along with valid lines from the 
-		 * countryList.txt file, thus breaking the code. I have to look into this.
-		 * 
-		 * For now, I have to complete my daily goal.
-		 * 
-		 * To use the file input uncomment the comments below, and comment out the countryOptions
-		 * assignments above
-		 */
-		
+     // populate Countries from text file
 		File textReader = new File("/Users/derin/Development/Java Projects/spring-mvc-demo/src/countryList.txt");
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(textReader)); 
 		ArrayList<String> arrayLoader = new ArrayList<String>();
