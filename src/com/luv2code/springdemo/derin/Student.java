@@ -12,10 +12,16 @@ public class Student {
 	
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
+	private LinkedHashMap<String, String> operatingSystemOptions;
 	
 	public Student() {
+		
+		// create new field object instance
 		countryOptions = new LinkedHashMap<>();
 		favoriteLanguageOptions = new LinkedHashMap<>();
+		operatingSystemOptions = new LinkedHashMap<>();
+		
+		// populate Countries
 		countryOptions.put("NG", "Nigeria");
 		countryOptions.put("US", "United States of America");
 		countryOptions.put("CA", "Canada");
@@ -24,10 +30,17 @@ public class Student {
 		countryOptions.put("BR", "Brazil");
 		countryOptions.put("DE", "Germany");
 		
+		// populate Programming Languages
 		favoriteLanguageOptions.put("Java", "Java");
         favoriteLanguageOptions.put("C#", "C#");
         favoriteLanguageOptions.put("PHP", "PHP");
         favoriteLanguageOptions.put("Ruby", "Ruby");
+        
+     // populate Operating Systems
+        operatingSystemOptions.put("Windows", "WINDOWS");
+        operatingSystemOptions.put("Mac", "DARWIN");
+        operatingSystemOptions.put("Linux", "LINUX");
+        operatingSystemOptions.put("Ubuntu", "UBUNTU");
 		
 		
 		/* The code below keeps generating a null line along with valid lines from the 
@@ -114,5 +127,12 @@ public class Student {
 	public void setOperatingSystem(String operatingSystem) {
 		this.operatingSystem = operatingSystem;
 	}
-	
+
+	public LinkedHashMap<String, String> getOperatingSystemOptions() {
+		return operatingSystemOptions;
+	}
+
+	public void setOperatingSystemOptions(LinkedHashMap<String, String> operatingSystemOptions) {
+		this.operatingSystemOptions = operatingSystemOptions;
+	}	
 }

@@ -25,10 +25,8 @@
 									items="${ student.favoriteLanguageOptions }" />
 			<br><br>
 			Operating Systems: 
-				Windows <form:checkbox path="operatingSystem" value="Windows"/>
-				Linux <form:checkbox path="operatingSystem" value="Linux"/>
-				Mac <form:checkbox path="operatingSystem" value="Mac"/>
-				Ubuntu <form:checkbox path="operatingSystem" value="Ubuntu"/>
+				<form:checkboxes 	path="operatingSystem" 
+									items="${ student.operatingSystemOptions }" />
 			<br><br>
 			<input type="submit" value="Submit"/>
 		</form:form>
