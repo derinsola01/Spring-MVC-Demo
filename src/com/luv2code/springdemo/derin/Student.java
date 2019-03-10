@@ -1,5 +1,10 @@
 package com.luv2code.springdemo.derin;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 import javax.validation.constraints.NotNull;
@@ -20,7 +25,7 @@ public class Student {
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
 	private LinkedHashMap<String, String> operatingSystemOptions;
 	
-	public Student() {
+	public Student() throws IOException {
 		
 		// create new field object instance
 		countryOptions = new LinkedHashMap<>();
@@ -28,13 +33,13 @@ public class Student {
 		operatingSystemOptions = new LinkedHashMap<>();
 		
 		// populate Countries
-		countryOptions.put("NG", "Nigeria");
-		countryOptions.put("US", "United States of America");
-		countryOptions.put("CA", "Canada");
-		countryOptions.put("IN", "India");
-		countryOptions.put("ES", "SPAIN");
-		countryOptions.put("BR", "Brazil");
-		countryOptions.put("DE", "Germany");
+//		countryOptions.put("NG", "Nigeria");
+//		countryOptions.put("US", "United States of America");
+//		countryOptions.put("CA", "Canada");
+//		countryOptions.put("IN", "India");
+//		countryOptions.put("ES", "SPAIN");
+//		countryOptions.put("BR", "Brazil");
+//		countryOptions.put("DE", "Germany");
 		
 		// populate Programming Languages
 		favoriteLanguageOptions.put("Java", "Java");
@@ -58,28 +63,30 @@ public class Student {
 		 * assignments above
 		 */
 		
-//		File textReader = new File("/Users/derin/Development/Java Projects/spring-mvc-demo/src/countryList.txt");
-//		BufferedReader bufferedReader = new BufferedReader(new FileReader(textReader)); 
-//		ArrayList<String> arrayLoader = new ArrayList<String>();
-//		while (bufferedReader.readLine() != null)
-//			arrayLoader.add(bufferedReader.readLine());
-//		bufferedReader.close();
-//		for (String rdr : arrayLoader)
-//			System.out.println("Checking Loaded Countries: " + rdr);
-//		countryOptions = loadCountries(arrayLoader);
-//		System.out.println("Printing countryOptions: " + countryOptions);
+		File textReader = new File("/Users/derin/Development/Java Projects/spring-mvc-demo/src/countryList.txt");
+		BufferedReader bufferedReader = new BufferedReader(new FileReader(textReader)); 
+		ArrayList<String> arrayLoader = new ArrayList<String>();
+		while (bufferedReader.readLine() != null)
+			arrayLoader.add(bufferedReader.readLine());
+		bufferedReader.close();
+		for (String rdr : arrayLoader)
+			System.out.println("Checking Loaded Countries: " + rdr);
+		countryOptions = loadCountries(arrayLoader);
+		System.out.println("Printing countryOptions: " + countryOptions);
 		
 	}
 	
-//	private LinkedHashMap<String, String> loadCountries(ArrayList<String> arrayLoader) {
-//		LinkedHashMap<String, String> tempLoader = new LinkedHashMap<>();
-//		for (String country : arrayLoader){
-//			String[] tempArr = country.split(" ");
-//			System.out.println("Before setting the List code is: " + tempArr[1] + " Country is: " + tempArr[0]);
-//			tempLoader.put(tempArr[1], tempArr[0]);
-//		}
-//		return tempLoader;
-//	}
+	private LinkedHashMap<String, String> loadCountries(ArrayList<String> arrayLoader) {
+		LinkedHashMap<String, String> tempLoader = new LinkedHashMap<>();
+		for (String country : arrayLoader){
+			if (country != null) {
+				String[] tempArr = country.split(" ");
+				System.out.println("Before setting the List code is: " + tempArr[1] + " Country is: " + tempArr[0]);
+				tempLoader.put(tempArr[1], tempArr[0]);
+			}
+		}
+		return tempLoader;
+	}
 
 	public String getFirstName() {
 		return firstName;
