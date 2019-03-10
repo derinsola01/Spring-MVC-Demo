@@ -7,6 +7,9 @@
 		<title>
 			Student Registration Form
 		</title>
+		<style>
+			.error{ color:red }
+		</style>
 	</head>
 	<body>
 		<form:form action="processForm" modelAttribute="student">
