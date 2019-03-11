@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 
 public class Student {
 
+	@NotNull(message="Field cannot be empty.")
 	@Pattern(regexp="^[ A-Za-z_@./#&+-]*$", message="MUST only contain alphabets")
 	private String firstName;
 	
@@ -28,8 +29,9 @@ public class Student {
 	
 	@Min(value=0, message="Must be greater than or equal to zero")
 	@Max(value=10, message="Must be less than or equal to ten")
-	private int freePasses;
+	private Integer freePasses;
 	
+	@NotNull(message="Field cannot be empty.")
 	@Pattern(regexp="^[0-9]{5}", message="MUST be 5 digits")
 	private String postalCode;
 	
@@ -152,11 +154,11 @@ public class Student {
 		this.operatingSystemOptions = operatingSystemOptions;
 	}
 
-	public int getFreePasses() {
+	public Integer getFreePasses() {
 		return freePasses;
 	}
 
-	public void setFreePasses(int freePasses) {
+	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
 	}
 
