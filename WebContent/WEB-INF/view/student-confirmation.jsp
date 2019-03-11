@@ -23,5 +23,8 @@
 				</li>
 			</c:forEach>
 		</ol>
+		<br>
+		The number of free passes is: ${ student.freePasses }
+		<br>
 	</body>
 </html>

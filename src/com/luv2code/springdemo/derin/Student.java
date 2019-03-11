@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -20,6 +22,10 @@ public class Student {
 	private String country;
 	private String favoriteLanguage;
 	private String operatingSystem;
+	
+	@Min(value=0, message="Must be greater than or equal to zero")
+	@Max(value=10, message="Must be less than or equal to ten")
+	private int freePasses;
 	
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
@@ -138,5 +144,14 @@ public class Student {
 
 	public void setOperatingSystemOptions(LinkedHashMap<String, String> operatingSystemOptions) {
 		this.operatingSystemOptions = operatingSystemOptions;
-	}	
+	}
+
+	public int getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(int freePasses) {
+		this.freePasses = freePasses;
+	}
+	
 }
