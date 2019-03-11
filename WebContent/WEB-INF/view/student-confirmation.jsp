@@ -26,5 +26,7 @@
 		<br>
 		The number of free passes is: ${ student.freePasses }
 		<br>
+		Postal code is: ${ student.postalCode }
+		<br>
 	</body>
 </html>

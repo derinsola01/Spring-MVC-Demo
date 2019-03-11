@@ -10,14 +10,17 @@ import java.util.LinkedHashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Student {
 
+	@Pattern(regexp="^[ A-Za-z_@./#&+-]*$", message="MUST only contain alphabets")
 	private String firstName;
 	
 	@NotNull(message="Field cannot be empty.")
 	@Size(min=3, message="Must have at least 3 Characters.")
+	@Pattern(regexp="^[ A-Za-z_@./#&+-]*$", message="MUST only contain alphabets")
 	private String lastName;
 	private String country;
 	private String favoriteLanguage;
@@ -26,6 +29,9 @@ public class Student {
 	@Min(value=0, message="Must be greater than or equal to zero")
 	@Max(value=10, message="Must be less than or equal to ten")
 	private int freePasses;
+	
+	@Pattern(regexp="^[0-9]{5}", message="MUST be 5 digits")
+	private String postalCode;
 	
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
@@ -152,6 +158,14 @@ public class Student {
 
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	
 }
