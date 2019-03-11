@@ -28,5 +28,7 @@
 		<br>
 		Postal code is: ${ student.postalCode }
 		<br>
+		Course validation code is: ${ student.courseCode }
+		<br>
 	</body>
 </html>

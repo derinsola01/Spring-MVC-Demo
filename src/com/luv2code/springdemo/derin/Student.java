@@ -27,6 +27,7 @@ public class Student {
 	private String favoriteLanguage;
 	private String operatingSystem;
 	
+	@NotNull(message="Field cannot be empty.")
 	@Min(value=0, message="Must be greater than or equal to zero")
 	@Max(value=10, message="Must be less than or equal to ten")
 	private Integer freePasses;
@@ -34,6 +35,10 @@ public class Student {
 	@NotNull(message="Field cannot be empty.")
 	@Pattern(regexp="^[0-9]{5}", message="MUST be 5 digits")
 	private String postalCode;
+	
+	@NotNull(message="Field cannot be empty.")
+	@CourseCode(value="COMP", message="MUST start with COMP")
+	private String courseCode;
 	
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
@@ -168,6 +173,14 @@ public class Student {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 	
 }
